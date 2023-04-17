@@ -1,0 +1,7 @@
+ background pagina: linear-gradient(to bottom, #ccffff 0%, #ffffff 100%);
+ background de los items: white 
+ background de cada item: #ccffff
+font color: black
+
+font: Noto Fonts
+

@@ -8,7 +8,8 @@ h1 {
   font-size: 1.5em;
 }
 
-h3 {
+h2 {
+  font-size: 1.5em;
 }
 
 h4 {
@@ -75,16 +76,17 @@ select {
 }
 
 .items {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: white;
+  background: linear-gradient(to bottom, #ccffff 0%, #ffffff 100%);
   margin-top: 2vh;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-items: center;
 }
-
-.itemrow {
-  display: flex;
-  flex-direction: column;
+.center {
+  text-align: center;
+  padding: 20px;
 }
 
 .item {
@@ -93,15 +95,33 @@ select {
   height: 415px;
   background: #ccffff;
   margin: 5px;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
 }
 
 img {
   margin-top: 15px;
 }
 
-@media (min-width: 720px) {
+.pantalon {
+  height: 50%;
+}
+
+@media (min-width: 500px) {
+  .items {
+    grid-template-columns: repeat(2, 150px);
+  }
+
   section {
-    height: 2050px;
+    height: 3800px;
+  }
+}
+
+@media (min-width: 750px) {
+  section {
+    height: 2100px;
   }
 
   .selectorrow {
@@ -114,10 +134,17 @@ img {
     width: 600px;
   }
 
-  .itemrow {
-    flex-direction: row;
+  .items {
+    grid-template-columns: repeat(4, 150px);
+    gap: 30px;
   }
 }
 
-.item {
+@media (min-width: 1200px) {
+  .items {
+    grid-template-columns: repeat(6, 150px);
+  }
+  section {
+    height: 1700px;
+  }
 }
